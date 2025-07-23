@@ -114,11 +114,13 @@ if s:style == "dark"
   let s:bg="#140b05"
   let s:special="#1c1008"
   let s:subbg="#c56306"
+  let s:orange="#fc4f05"
+  let s:darkgold="#a35f00"
 else
   let s:fg="#140b05"
   let s:bg="#fc9505"
   let s:special="#e58806"
-  let s:subbg="#9e5d07"
+  let s:subbg="#a35f00"
 endif
 
 hi clear Normal
@@ -143,3 +145,9 @@ endfor
 for s:item in s:error_items
   exec "hi " . s:item . " guifg=#ff0000"
 endfor
+
+hi SpecialKey guifg=#5e3700
+exec "hi Constant guifg=" . s:orange
+exec "hi Statement guifg=" . s:orange
+exec "hi Comment guifg=" . s:darkgold
+exec "hi Type guifg=" . s:darkgold
